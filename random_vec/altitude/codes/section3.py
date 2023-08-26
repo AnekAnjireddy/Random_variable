@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 import sys
-sys.path.insert(0,'/Users/aneka/Downloads/RandomVariable/EE23010/random_vec/CoordGeo')
+sys.path.insert(0,'../../CoordGeo')
 from line.funcs import *
 from triangle.funcs import alt_foot
 
@@ -43,9 +43,10 @@ x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
 x_AH = line_gen(H,A)
 x_BH = line_gen(B,H)
-x_CH = line_gen(F,H)
-x_CE = line_gen(C,E)
-x_CD = line_gen(C,D)
+x_CH = line_gen(C,H)
+x_CF = line_gen(C,F)
+x_AD = line_gen(A,D)
+x_BE = line_gen(B,E)
 
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
@@ -54,8 +55,9 @@ plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
 plt.plot(x_AH[0,:],x_AH[1,:],label='$AD_1$')
 plt.plot(x_BH[0,:],x_BH[1,:],label='$BE_1$')
 plt.plot(x_CH[0,:],x_CH[1,:],label='$CF_1$')
-plt.plot(x_CE[0,:],x_CE[1,:],linestyle='dotted')
-plt.plot(x_CD[0,:],x_CD[1,:],linestyle='dotted')
+plt.plot(x_CF[0,:],x_CF[1,:],linestyle='dotted')
+plt.plot(x_AD[0,:],x_AD[1,:],linestyle='dotted')
+plt.plot(x_BE[0,:],x_BE[1,:],linestyle='dotted')
 
 A = A.reshape(-1,1)
 B = B.reshape(-1,1)
